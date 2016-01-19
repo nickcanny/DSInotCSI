@@ -1,0 +1,14 @@
+What is the problem you want to solve
+  Trying to find a relationship between the mortality rate in hospitals (CA) and see if there is a better way to prepare for the deadlier months throughout the year.
+
+Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?
+  My client will decide how to better deal with the influx of inpatients in their hospitals. Having somewhat of an idea of the year to come will help to better staff the peaks in the year therefore aleiviating stress. 
+
+What data are you going to use for this? How will you acquire this data?
+  The data will be gathered from the healthdata.gov site. California has a great deal of information and has a large enough population that will help express better trends in the data.
+
+In brief, outline your approach to solving this problem (knowing that this might change later).
+  First catagorize the data into zip codes or districts(nearest neighbor), finding out when the major less leathal peaks effecting health are, getting temperature information on the area codes from the national weather service, and normalizing the data for better visualization.
+
+What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+I will provide a regional map showing areas of california with easily interpertable graphs, with a write up of correlations that were found in the research, and the code use to process the data.
