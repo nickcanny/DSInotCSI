@@ -1,0 +1,16 @@
+#importing the data and looking at the data types that are associated with each column
+wb =  pd.read_json('data/world_bank_projects.json')
+#wb.dtypes
+
+#1. Find the 10 countries with most projects
+projects = wb.groupby(['countrycode','countryshortname']).size().sort_values()
+projects.tail(10)
+
+#2. Find the top 10 major project themes (using column 'mjtheme_namecode')
+namecode = json.load((open('data/world_bank_projects.json')))
+namecode = json_normalize(namecode, 'mjtheme_namecode')
+namecode = namecode.sort_values(by='code')
+namecode['name'] = namecode['name'].map(lambda x: x if x else None)
+namecode = namecode.bfill()
+namecode = namecode.groupby(['code','name']).size().sort_values().tail(10)
+namecode
